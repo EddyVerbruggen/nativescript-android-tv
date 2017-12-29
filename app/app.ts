@@ -3,19 +3,26 @@ import * as utils from "tns-core-modules/utils/utils";
 
 declare const android: any;
 
-// Load either the TV or phone UI:
 if (utils.ad) {
+  // Android: Load either the TV or phone UI
   const uiModeManager = utils.ad.getApplicationContext().getSystemService(android.content.Context.UI_MODE_SERVICE);
   if (uiModeManager.getCurrentModeType() === android.content.res.Configuration.UI_MODE_TYPE_TELEVISION) {
-    console.log("Running on a TV Device");
+    console.log("Running on a TV");
     application.start({moduleName: "main-page-tv"});
   } else {
-    console.log("Running on a non-TV Device");
+    console.log("Running on a Phone / Tablet");
     application.start({moduleName: "main-page"});
   }
 } else {
+  // iOS
   application.start({moduleName: "main-page"});
 }
+
+
+
+
+
+// The class below is not currently used (also commented in AndroidManifest.xml)
 
 /*
 @JavaProxy("com.tns.NativeScriptTVActivity")

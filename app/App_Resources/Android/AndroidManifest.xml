@@ -15,7 +15,7 @@
       android:minSdkVersion="17"
       android:targetSdkVersion="__APILEVEL__"/>
 
-  <uses-sdk tools:overrideLibrary="android.support.v17.leanback"/>
+  <!--uses-sdk tools:overrideLibrary="android.support.v17.leanback"/-->
 
   <uses-feature android:name="android.software.leanback"
                 android:required="false" />
@@ -49,6 +49,7 @@
       </intent-filter>
     </activity>
 
+    <!-- The TV-specific activity below is not used (also commented in app.ts) -->
     <!--activity
         android:name="com.tns.NativeScriptTVActivity"
         android:label="@string/title_activity_kimera"
@@ -60,21 +61,6 @@
         <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
       </intent-filter>
     </activity-->
-
-    <!--activity
-        android:name="com.tns.NativeScriptActivity"
-        android:label="@string/title_activity_kimera"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:theme="@style/LaunchScreenTheme">
-
-      <meta-data android:name="SET_THEME_ON_LAUNCH" android:resource="@style/AppTheme"/>
-
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN"/>
-        <category android:name="android.intent.category.LAUNCHER"/>
-      </intent-filter>
-    </activity-->
-
 
     <activity android:name="com.tns.ErrorReportActivity"/>
   </application>
