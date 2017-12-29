@@ -1,0 +1,9 @@
+android {
+    defaultConfig {
+        generatedDensities = []
+        applicationId = "org.nativescript.sample.androidtv"
+    }
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
+}

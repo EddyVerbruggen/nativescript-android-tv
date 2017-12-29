@@ -1,0 +1,43 @@
+﻿Label {
+  color: #fff;
+}
+
+.nav {
+  background-color: #87cefa;
+}
+
+.nav StackLayout {
+  padding: 20 30;
+}
+
+.nav Label {
+  font-weight: bold;
+  font-size: 22;
+  padding: 8 0;
+}
+
+.content {
+  padding: 20 30;
+  background-color: #f0f8ff;
+}
+
+.content Label {
+  font-weight: bold;
+  font-size: 22;
+  color: #6494AA;
+}
+
+.content Image {
+  margin: 20;
+  border-radius: 10;
+}
+
+.nav button {
+  background-color: #87cefa;
+  border-color: #fff;
+  border-width: 1;
+  padding: 10;
+  margin: 14 0;
+  font-size: 17;
+  border-radius: 5;
+}

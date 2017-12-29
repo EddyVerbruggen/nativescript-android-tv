@@ -1,0 +1,40 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:lv="nativescript-pro-ui/listview" loaded="pageLoaded">
+  <GridLayout rows="*" columns="*, 3*">
+
+    <ScrollView col="0" class="nav">
+      <StackLayout>
+        <Button text="Cat page 1" tap="{{ loadCats }}"/>
+        <Button text="Cat page 2" tap="{{ loadCats }}"/>
+        <Button text="Cat page 3" tap="{{ loadCats }}"/>
+        <Button text="Cat page 4" tap="{{ loadCats }}"/>
+        <Button text="Cat page 5" tap="{{ loadCats }}"/>
+        <Button text="Cat page 6" tap="{{ loadCats }}"/>
+        <Button text="Cat page 7" tap="{{ loadCats }}"/>
+        <Button text="Cat page 8" tap="{{ loadCats }}"/>
+        <Button text="Cat page 9" tap="{{ loadCats }}"/>
+        <Button text="Cat page 10" tap="{{ loadCats }}"/>
+        <Button text="Cat page 11" tap="{{ loadCats }}"/>
+        <Button text="Cat page 12" tap="{{ loadCats }}"/>
+        <Button text="Cat page 13" tap="{{ loadCats }}"/>
+        <Button text="Cat page 14" tap="{{ loadCats }}"/>
+      </StackLayout>
+    </ScrollView>
+
+    <ScrollView col="1" class="content">
+
+      <lv:RadListView items="{{ cats }}" >
+
+        <lv:RadListView.listViewLayout>
+          <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="200" spanCount="3"/>
+        </lv:RadListView.listViewLayout>
+
+        <lv:RadListView.itemTemplate>
+          <StackLayout orientation="vertical">
+            <Image src="{{ url }}" stretch="aspectFill" height="200"/>
+          </StackLayout>
+        </lv:RadListView.itemTemplate>
+      </lv:RadListView>
+    </ScrollView>
+
+  </GridLayout>
+</Page>
