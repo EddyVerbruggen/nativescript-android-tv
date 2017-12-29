@@ -1,4 +1,4 @@
-﻿import * as application from 'tns-core-modules/application';
+﻿import * as application from "tns-core-modules/application";
 import * as utils from "tns-core-modules/utils/utils";
 
 declare const android: any;

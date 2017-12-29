@@ -9,7 +9,7 @@ support Android TV as well!
 
 ### How?!
 I found the easiest way to support TV devices is adding [this line](https://github.com/EddyVerbruggen/nativescript-android-tv/blob/3b3201e979bff762cc4bc36ad04eb946cb48bd6d/app/App_Resources/Android/AndroidManifest.xml#L48) to your `AndroidManifest.xml`
-and figuring out at runtime which UI to load.
+and [figuring out at runtime which UI to load](https://github.com/EddyVerbruggen/nativescript-android-tv/blob/db3848abc508d700ecb80e320c5e5374b1f2073b/app/app.ts#L6-L19).
 
 #### Wait.. does that mean I have to duplicate code?
 You don't *have* to duplicate anything, but you really don't want to reuse phone layouts on your TV
