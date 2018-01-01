@@ -1,7 +1,7 @@
 # NativeScript ❤️ Android TV
 
-> 🎬 [This app, running on a Phone and TV (YouTube, 23s)](https://www.youtube.com/watch?v=b9Wv0IzN3ts)
-> 🎬 [This app, running on a TV, with D-Pad controls (YouTube, 20s)](https://www.youtube.com/watch?v=HjxvDxbAOW0)
+> * 🎬 [This app, running on a Phone and TV (YouTube, 23s)](https://www.youtube.com/watch?v=b9Wv0IzN3ts)
+> * 🎬 [This app, running on a TV, with D-Pad controls (YouTube, 20s)](https://www.youtube.com/watch?v=HjxvDxbAOW0)
 
 ### What?
 Unsurprisingly Android TV is very much like the Android you know and love,
