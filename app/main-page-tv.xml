@@ -3,21 +3,21 @@
 
     <ScrollView col="0" class="nav">
       <StackLayout>
-        <Button text="Cat page 1" pageid="1" tap="{{ loadCats }}" loaded="buttonLoaded"/>
-        <Button text="Cat page 2" pageid="2" tap="{{ loadCats }}" loaded="buttonLoaded"/>
-        <Button text="Cat page 3" pageid="3" tap="{{ loadCats }}" loaded="buttonLoaded"/>
-        <Button text="Cat page 4" pageid="4" tap="{{ loadCats }}" loaded="buttonLoaded"/>
-        <Button text="Cat page 5" pageid="5" tap="{{ loadCats }}" loaded="buttonLoaded"/>
-        <Button text="Cat page 6" pageid="6" tap="{{ loadCats }}" loaded="buttonLoaded"/>
-        <Button text="Cat page 7" pageid="7" tap="{{ loadCats }}" loaded="buttonLoaded"/>
-        <Button text="Cat page 8" pageid="8" tap="{{ loadCats }}" loaded="buttonLoaded"/>
-        <Button text="Cat page 9" pageid="9" tap="{{ loadCats }}" loaded="buttonLoaded"/>
+        <Button text="Cat page 1" pageid="1" tap="{{ loadCats }}" loaded="elementLoaded"/>
+        <Button text="Cat page 2" pageid="2" tap="{{ loadCats }}" loaded="elementLoaded"/>
+        <Button text="Cat page 3" pageid="3" tap="{{ loadCats }}" loaded="elementLoaded"/>
+        <Button text="Cat page 4" pageid="4" tap="{{ loadCats }}" loaded="elementLoaded"/>
+        <Button text="Cat page 5" pageid="5" tap="{{ loadCats }}" loaded="elementLoaded"/>
+        <Button text="Cat page 6" pageid="6" tap="{{ loadCats }}" loaded="elementLoaded"/>
+        <Button text="Cat page 7" pageid="7" tap="{{ loadCats }}" loaded="elementLoaded"/>
+        <Button text="Cat page 8" pageid="8" tap="{{ loadCats }}" loaded="elementLoaded"/>
+        <Button text="Cat page 9" pageid="9" tap="{{ loadCats }}" loaded="elementLoaded"/>
       </StackLayout>
     </ScrollView>
 
     <StackLayout col="1" class="content">
 
-      <Label text="{{ 'Cats page ' + page }}"/>
+      <Label text="{{ page }}"/>
 
       <!--<TextField text="abc"/>-->
 

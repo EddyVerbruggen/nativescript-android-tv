@@ -3,6 +3,7 @@ import * as pages from "tns-core-modules/ui/page";
 import { HelloWorldModel } from "./main-view-model";
 import * as utils from "tns-core-modules/utils/utils";
 import { ViewBase } from "tns-core-modules/ui/core/view-base";
+import { Button } from "tns-core-modules/ui/button";
 
 declare const android: any;
 
@@ -22,7 +23,8 @@ export function elementLoaded(args: observable.EventData): void {
   const view = <ViewBase>args.object;
 
   // There are 2 ways to make the TV controls highlight the currently focused element:
-  // 1) use a resource that speficies a 'focused' state:
+
+  // 1) use a resource that speficies a 'focused' state (uncomment the line below):
   // view.android.setBackgroundResource(identifier);
 
   // 2) don't use a resource, but set a backreference so 'dispatchKeyEvent' in app.ts can swap CSS classes

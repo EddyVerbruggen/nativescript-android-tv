@@ -7,16 +7,15 @@ export class Cat {
 }
 
 export class HelloWorldModel extends Observable {
-  public page: number;
+  public page: string = "Select a page on the left..";
   public cats: Array<Cat> = [];
 
   constructor() {
     super();
-    this.loadCats();
   }
 
   public loadCats(args?: observable.EventData): void {
-    this.set("page", args && args.object ? args.object["pageid"] : 1);
+    this.set("page", "Cats page " + (args && args.object ? args.object["pageid"] : 1));
 
     const newCats: Array<Cat> = [];
     for (let i = 0; i < 18; i++) {

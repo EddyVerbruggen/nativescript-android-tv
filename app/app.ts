@@ -19,9 +19,6 @@ if (utils.ad) {
 }
 
 
-
-
-
 // The class below is not currently used (also commented in AndroidManifest.xml)
 @JavaProxy("com.tns.NativeScriptTVActivity")
 class Activity extends android.app.Activity {
@@ -53,10 +50,11 @@ class Activity extends android.app.Activity {
   }
 
   public dispatchKeyEvent(event: android.view.KeyEvent): boolean {
-    console.log(">>> dispatchKeyEvent: " + event + " @ " + new Date().getTime());
-    const isDPADCenter = event.getKeyCode() === android.view.KeyEvent.KEYCODE_DPAD_CENTER;
-    const tnsButton = <ViewBase>this.getCurrentFocus()["jsview"];
+    // you can respond to specific keycodes by fi. registering a listener and invoking it when appropriate
+    console.log("D-Pad center button pressed? " + (event.getKeyCode() === android.view.KeyEvent.KEYCODE_DPAD_CENTER));
 
+    // let's highlight the element that currently has the focus
+    const tnsButton = <ViewBase>this.getCurrentFocus()["jsview"];
     if (tnsButton && tnsButton !== this.highlightedElement) {
       tnsButton.addPseudoClass("focused");
       if (this.highlightedElement) {
