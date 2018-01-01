@@ -3,24 +3,23 @@
 
     <ScrollView col="0" class="nav">
       <StackLayout>
-        <Button text="Cat page 1" tap="{{ loadCats }}"/>
-        <Button text="Cat page 2" tap="{{ loadCats }}"/>
-        <Button text="Cat page 3" tap="{{ loadCats }}"/>
-        <Button text="Cat page 4" tap="{{ loadCats }}"/>
-        <Button text="Cat page 5" tap="{{ loadCats }}"/>
-        <Button text="Cat page 6" tap="{{ loadCats }}"/>
-        <Button text="Cat page 7" tap="{{ loadCats }}"/>
-        <Button text="Cat page 8" tap="{{ loadCats }}"/>
-        <Button text="Cat page 9" tap="{{ loadCats }}"/>
-        <Button text="Cat page 10" tap="{{ loadCats }}"/>
-        <Button text="Cat page 11" tap="{{ loadCats }}"/>
-        <Button text="Cat page 12" tap="{{ loadCats }}"/>
-        <Button text="Cat page 13" tap="{{ loadCats }}"/>
-        <Button text="Cat page 14" tap="{{ loadCats }}"/>
+        <Button text="Cat page 1" pageid="1" tap="{{ loadCats }}" loaded="buttonLoaded"/>
+        <Button text="Cat page 2" pageid="2" tap="{{ loadCats }}" loaded="buttonLoaded"/>
+        <Button text="Cat page 3" pageid="3" tap="{{ loadCats }}" loaded="buttonLoaded"/>
+        <Button text="Cat page 4" pageid="4" tap="{{ loadCats }}" loaded="buttonLoaded"/>
+        <Button text="Cat page 5" pageid="5" tap="{{ loadCats }}" loaded="buttonLoaded"/>
+        <Button text="Cat page 6" pageid="6" tap="{{ loadCats }}" loaded="buttonLoaded"/>
+        <Button text="Cat page 7" pageid="7" tap="{{ loadCats }}" loaded="buttonLoaded"/>
+        <Button text="Cat page 8" pageid="8" tap="{{ loadCats }}" loaded="buttonLoaded"/>
+        <Button text="Cat page 9" pageid="9" tap="{{ loadCats }}" loaded="buttonLoaded"/>
       </StackLayout>
     </ScrollView>
 
-    <ScrollView col="1" class="content">
+    <StackLayout col="1" class="content">
+
+      <Label text="{{ 'Cats page ' + page }}"/>
+
+      <!--<TextField text="abc"/>-->
 
       <lv:RadListView items="{{ cats }}" >
 
@@ -34,7 +33,7 @@
           </StackLayout>
         </lv:RadListView.itemTemplate>
       </lv:RadListView>
-    </ScrollView>
+    </StackLayout>
 
   </GridLayout>
 </Page>

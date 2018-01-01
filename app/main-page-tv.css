@@ -41,3 +41,7 @@
   font-size: 17;
   border-radius: 5;
 }
+
+.nav button:focused {
+  background-color: #65aafa;
+}

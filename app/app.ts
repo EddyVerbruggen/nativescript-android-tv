@@ -1,7 +1,7 @@
 ﻿import * as application from "tns-core-modules/application";
 import * as utils from "tns-core-modules/utils/utils";
-
-declare const android: any;
+import * as frame from "tns-core-modules/ui/frame";
+import { ViewBase } from "tns-core-modules/ui/core/view-base";
 
 if (utils.ad) {
   // Android: Load either the TV or phone UI
@@ -23,11 +23,11 @@ if (utils.ad) {
 
 
 // The class below is not currently used (also commented in AndroidManifest.xml)
-
-/*
 @JavaProxy("com.tns.NativeScriptTVActivity")
 class Activity extends android.app.Activity {
   private _callbacks: frame.AndroidActivityCallbacks;
+
+  private highlightedElement: ViewBase;
 
   onCreate(savedInstanceState: android.os.Bundle): void {
     if (!this._callbacks) {
@@ -52,6 +52,21 @@ class Activity extends android.app.Activity {
     this._callbacks.onDestroy(this, super.onDestroy);
   }
 
+  public dispatchKeyEvent(event: android.view.KeyEvent): boolean {
+    console.log(">>> dispatchKeyEvent: " + event + " @ " + new Date().getTime());
+    const isDPADCenter = event.getKeyCode() === android.view.KeyEvent.KEYCODE_DPAD_CENTER;
+    const tnsButton = <ViewBase>this.getCurrentFocus()["jsview"];
+
+    if (tnsButton && tnsButton !== this.highlightedElement) {
+      tnsButton.addPseudoClass("focused");
+      if (this.highlightedElement) {
+        this.highlightedElement.deletePseudoClass("focused");
+      }
+      this.highlightedElement = tnsButton;
+    }
+    return super.dispatchKeyEvent(event);
+  }
+
   public onBackPressed(): void {
     this._callbacks.onBackPressed(this, super.onBackPressed);
   }
@@ -64,4 +79,3 @@ class Activity extends android.app.Activity {
     this._callbacks.onActivityResult(this, requestCode, resultCode, data, super.onActivityResult);
   }
 }
-*/

@@ -36,7 +36,7 @@
       android:theme="@style/AppTheme">
 
     <activity
-        android:name="com.tns.NativeScriptActivity"
+        android:name="com.tns.NativeScriptTVActivity"
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:theme="@style/LaunchScreenTheme">
 
